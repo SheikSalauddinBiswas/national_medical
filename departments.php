@@ -50,73 +50,47 @@
     <!-- Feature Area End -->
 
     <!-- Department Area Starts -->
+    <?php
+                include "admin/connection.php";
+                $hssql = "SELECT * FROM home_slider" ;
+                $HSResult = $db->query($hssql);
+                  
+
+            ?>
     <section class="department-area section-padding4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
+        <div class="container bordered">
+            <div class="row ">
+                <div class="col-lg-6 offset-lg-3 ">
                     <div class="section-top text-center">
                         <h2>Popular department</h2>
-                        <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
+                        
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="department-slider owl-carousel">
+                        <?php while($hsrow = $HSResult->fetch_assoc()):  ?>
                         <div class="single-slide">
                             <div class="slide-img">
-                                <img src="assets/images/department1.jpg" alt="" class="img-fluid">
+                                <img src="<?php echo"admin/images/slider/" .$hsrow['image']  ;  ?>" alt="image">
                                 <div class="hover-state">
                                     <a href="#"><i class="fa fa-stethoscope"></i></a>
                                 </div>
                             </div>
                             <div class="single-department item-padding text-center">
-                                <h3>cardiac clinic</h3>
-                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
+                                <h3><?php echo $hsrow['title']  ;  ?></h3>
+                                <p><?php echo $hsrow['description']  ;  ?></p>
                             </div>
                         </div>
-                        <div class="single-slide">
-                            <div class="slide-img">
-                                <img src="assets/images/department2.jpg" alt="" class="img-fluid">
-                                <div class="hover-state">
-                                    <a href="departments.php"><i class="fa fa-stethoscope"></i></a>
-                                </div>
-                            </div>
-                            <div class="single-department item-padding text-center">
-                                <h3>plastic surgery</h3>
-                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
-                            </div>
-                        </div>
-                        <div class="single-slide">
-                            <div class="slide-img">
-                                <img src="assets/images/department3.jpg" alt="" class="img-fluid">
-                                <div class="hover-state">
-                                    <a href="departments.php"><i class="fa fa-stethoscope"></i></a>
-                                </div>
-                            </div>
-                            <div class="single-department item-padding text-center">
-                                <h3>dental clinic</h3>
-                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
-                            </div>
-                        </div>
-                        <div class="single-slide">
-                            <div class="slide-img">
-                                <img src="assets/images/department1.jpg" alt="" class="img-fluid">
-                                <div class="hover-state">
-                                    <a href="departments.php"><i class="fa fa-stethoscope"></i></a>
-                                </div>
-                            </div>
-                            <div class="single-department item-padding text-center">
-                                <h3>cardiac clinic</h3>
-                                <p>Hath creeping subdue he fish gred face whose spirit that seasons today multiply female midst upon</p>
-                            </div>
-                        </div>
+                        <?php endwhile; ?>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Department Area Starts -->
+    <!-- Department Area end -->
 
     <!-- Hotline Area Starts -->
     <section class="hotline-area text-center section-padding">

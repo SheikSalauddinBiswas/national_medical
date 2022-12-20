@@ -6,7 +6,7 @@
   <div class="" id="content">
     <div class="">
         <div class="">
-        <h1 class="text-secondary pl-5 pt-3"><span class="fa fa-address-card-o text-info" ></span>Home Slider Add<hr></h1> 
+        <h1 class="text-secondary pl-5 pt-3"><span class="fa fa-address-card-o text-info" ></span>Department Slider Add<hr></h1> 
         </div>
     </div><hr>
     <br><br>
