@@ -96,7 +96,7 @@ $result =$db->query($sql);
                 <div class="col-lg-6 offset-lg-3 ">
                     <div class="section-top text-center">
                         <h2>Popular department</h2>
-                        <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
+                        
                     </div>
                 </div>
             </div>
