@@ -49,6 +49,7 @@ if($_SESSION['id']):
     ?>
     <div >
       <h3 class="text-secondary pl-5 pt-3"><u>Home Feature</u></h3>
+      <a href="home_feature_add.php" class="btn btn-secondary ml-5 mb-2">Add New Feature</a>
     </div>
     <div>
       <table class="table table-bordered container-sm">
@@ -68,6 +69,7 @@ if($_SESSION['id']):
             <td><?php echo $row['description']  ;  ?></td>
             <td>
              <a href="home_feature_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
+             <a href="home_feature_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
             </td>
         </tr>
         <?php endwhile; ?>
