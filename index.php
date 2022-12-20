@@ -30,13 +30,13 @@ $result =$db->query($sql);
                 include "admin/connection.php";
                 $hfsql = "SELECT * FROM home_feature" ;
                 $HFResult = $db->query($hfsql);
-                
+                while($hfrow = $HFResult->fetch_assoc()):  
 
                 ?>
     <section class="feature-area section-padding">
         <div class="container">
             <div class="row">
-                <?php while($hfrow = $HFResult->fetch_assoc()):   ?>
+                
                 <div class="col-lg-3 col-md-6">
                     <div class="single-feature text-center item-padding">
                         <img src="<?php echo"admin/images/feature/" .$hfrow['image']  ;  ?>" alt="image">
@@ -76,9 +76,9 @@ $result =$db->query($sql);
 
     <!-- Department Area Starts -->
     <section class="department-area section-padding4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
+        <div class="container bordered">
+            <div class="row ">
+                <div class="col-lg-6 offset-lg-3 ">
                     <div class="section-top text-center">
                         <h2>Popular department</h2>
                         <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>

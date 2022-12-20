@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Our </h1>
+                    <h1>Our Doctors </h1>
                     <a href="index.php">Home</a> <span>|</span> <a href="doctors.php">Doctors</a>
                 </div>
             </div>
