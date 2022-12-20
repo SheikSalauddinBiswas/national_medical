@@ -26,16 +26,17 @@ $result =$db->query($sql);
     <!-- Banner Area End -->
 
     <!-- Feature Area Starts -->
-    <section class="feature-area section-padding">
-        <div class="container">
-            <div class="row">
                 <?php
                 include "admin/connection.php";
                 $hfsql = "SELECT * FROM home_feature" ;
                 $HFResult = $db->query($hfsql);
-                while($hfrow = $HFResult->fetch_assoc()):
+                
 
                 ?>
+    <section class="feature-area section-padding">
+        <div class="container">
+            <div class="row">
+                <?php while($hfrow = $HFResult->fetch_assoc()):   ?>
                 <div class="col-lg-3 col-md-6">
                     <div class="single-feature text-center item-padding">
                         <img src="<?php echo"admin/images/feature/" .$hfrow['image']  ;  ?>" alt="image">
@@ -43,11 +44,12 @@ $result =$db->query($sql);
                         <p class="pt-3"><?php echo $hfrow['description']  ;  ?></p>
                     </div>
                 </div>
-                <?php endwhile; ?>
+                
 
             </div>
         </div>
     </section>
+    <?php endwhile; ?>
     <!-- Feature Area End -->
 
     <!-- Welcome Area Starts -->
