@@ -53,22 +53,30 @@ $result =$db->query($sql);
     <!-- Feature Area End -->
 
     <!-- Welcome Area Starts -->
+            <?php
+                include "admin/connection.php";
+                $hwsql = "SELECT * FROM home_welcome" ;
+                $HWResult = $db->query($hwsql);
+                  
+
+            ?>
     <section class="welcome-area section-padding3">
         <div class="container">
             <div class="row">
+                <?php while($hwrow = $HWResult->fetch_assoc()):  ?>
                 <div class="col-lg-5 align-self-center">
                     <div class="welcome-img">
-                        <img src="assets/images/welcome.png" alt="">
+                        <img src="<?php echo"admin/images/welcome/" .$hwrow['image']  ;  ?>" alt="image">
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="welcome-text mt-5 mt-lg-0">
-                        <h2>Welcome to our clinic</h2>
-                        <p class="pt-3">Subdue whales void god which living don't midst lesser yielding over lights whose. Cattle greater brought sixth fly den dry good tree isn't seed stars were.</p>
-                        <p>Subdue whales void god which living don't midst lesser yielding over lights whose. Cattle greater brought sixth fly den dry good tree isn't seed stars were the boring.</p>
+                        <h2><?php echo $hwrow['title']  ;  ?></h2>
+                        <p class="pt-3"><?php echo $hwrow['description']  ;  ?></p>
                         <a href="#" class="template-btn mt-3">learn more</a>
                     </div>
                 </div>
+                <?php endwhile; ?>
             </div>
         </div>
     </section>
