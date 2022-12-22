@@ -39,6 +39,35 @@
         </tbody>
       </table>
     </div>
+    <!-- google map area start -->
+    <?php
+      $sql    ="SELECT * FROM map ORDER BY id DESC";
+      $result =$db->query($sql);
+    ?>
+    <div >
+      <h3 class="text-secondary pl-5 pt-3"><u>Google Map</u></h3>
+      <a href="gmap_add.php" class="btn btn-secondary ml-5 mb-2">Add New G-Map</a>
+    </div>
+    <div>
+      <table class="table table-bordered container-md">
+        <thead class="thead-dark">
+          <th>ID</th>
+          <th>G-map URL</th>
+          <th>Edit</th>
+        </thead>
+        <?php while($row = $result->fetch_assoc()):   ?>
+        <tbody>
+        <tr>
+            <td><?php echo $row['id']  ;  ?></td>
+            <td><?php echo $row['gurl']  ;  ?></td>
+            <td>
+             <a href="gmap_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+            </td>
+        </tr>
+        <?php endwhile; ?>
+        </tbody>
+      </table>
+    </div>
 
 
 
