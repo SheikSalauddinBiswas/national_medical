@@ -13,7 +13,7 @@
         // header('Location:index.php') ;
         if( move_uploaded_file($_FILES['image']['tmp_name'] , $target))
         {
-            header('Location:index.php') ;
+            header('Location:department.php') ;
         }
         // echo 'data insert success';
     }

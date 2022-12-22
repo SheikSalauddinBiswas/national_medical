@@ -69,7 +69,7 @@ if($_SESSION['id']):
             <td><?php echo $row['description']  ;  ?></td>
             <td>
              <a href="home_feature_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
-             <a href="home_feature_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
+             <a href="home_feature_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
             </td>
         </tr>
         <?php endwhile; ?>
@@ -103,7 +103,7 @@ if($_SESSION['id']):
             <td><?php echo $row['description']  ;  ?></td>
             <td>
              <a href="home_welcome_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
-             <a href="home_welcome_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
+             <a href="home_welcome_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
             </td>
         </tr>
         <?php endwhile; ?>
