@@ -31,7 +31,7 @@
             <td><?php echo $row['mobile']  ;  ?></td>
             <td><?php echo $row['description']  ;  ?></td>
             <td>
-             <a href="home_feature_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
+             <a href="hotline_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
              <a href="home_feature_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
             </td>
         </tr>

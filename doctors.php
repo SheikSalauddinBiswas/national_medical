@@ -118,14 +118,21 @@
     <!-- Specialist Area Starts -->
 
     <!-- Hotline Area Starts -->
+    <?php
+        include "admin/connection.php";
+        $sql    ="SELECT * FROM hotline ";
+        $result =$db->query($sql);
+    ?>
     <section class="hotline-area text-center section-padding">
         <div class="container">
             <div class="row">
+                <?php while($row = $result->fetch_assoc()):   ?>
                 <div class="col-lg-12">
-                    <h2>Emergency hotline</h2>
-                    <span>(+01) – 256 567 550</span>
-                    <p class="pt-3">We provide 24/7 customer support. Please feel free to contact us <br>for emergency case.</p>
+                    <h2><?php echo $row['title']  ;  ?></h2>
+                    <span><?php echo"(+88)" .$row['mobile']  ;  ?></span>
+                    <p class="pt-3"><?php echo $row['description']  ;  ?></p>
                 </div>
+                <?php endwhile; ?>
             </div>
         </div>
     </section>
