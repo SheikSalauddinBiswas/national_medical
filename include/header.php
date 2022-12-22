@@ -63,18 +63,8 @@
                         <li class="menu-active"><a href="index.php">Home</a></li>
                         <li><a href="departments.php">departments</a></li>
                         <li><a href="doctors.php">doctors</a></li>
-                        <li class="menu-has-children"><a href="">Pages</a>
-                            <ul>
-                                <li><a href="about.php">about us</a></li>
-                                <li><a href="elements.php">elements</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-has-children"><a href="">blog</a>
-                            <ul>
-                                <li><a href="blog-home.php">blog home</a></li>
-                                <li><a href="blog-details.php">blog details</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="about.php">about us</a></li>
+                        <li><a href="blog-home.php">blog home</a></li>
                         <li><a href="contact.php">Contact</a></li>			          				          
                     </ul>
                 </nav><!-- #nav-menu-container -->		    		
