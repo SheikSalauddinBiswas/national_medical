@@ -34,7 +34,7 @@
             <td><?php echo $row['massage']  ;  ?></td>
             <td>
              
-             <a href="appointment_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
+             <a href="appointment_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
             </td>
         </tr>
         <?php endwhile; ?>
