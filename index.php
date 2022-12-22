@@ -125,81 +125,36 @@ $result =$db->query($sql);
     </section>
     <!-- Department Area end -->
 
-    <!-- Patient Area Starts -->
-    <section class="patient-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-top text-center">
-                        <h2>Patient are saying</h2>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="single-patient mb-4">
-                        <img src="assets/images/patient1.png" alt="">
-                        <h3>daren jhonson</h3>
-                        <h5>hp specialist</h5>
-                        <p class="pt-3">Elementum libero hac leo integer. Risus hac road parturient feugiat. Litora cursus hendrerit bib elit Tempus inceptos posuere metus.</p>
-                    </div>
-                    <div class="single-patient">
-                        <img src="assets/images/patient2.png" alt="">
-                        <h3>black heiden</h3>
-                        <h5>hp specialist</h5>
-                        <p class="pt-3">Elementum libero hac leo integer. Risus hac road parturient feugiat. Litora cursus hendrerit bib elit Tempus inceptos posuere metus.</p>
-                    </div>
-                </div>
-                <div class="col-lg-5 offset-lg-1 align-self-center">
-                    <div class="appointment-form text-center mt-5 mt-lg-0">
-                        <h3 class="mb-5">appointment now</h3>
-                        <form action="#">
-                            <div class="form-group">
-                                <input type="text" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" placeholder="Your Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email'" required> 
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="datepicker" placeholder="Date" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Date'" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea name="message" cols="20" rows="7"  placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required></textarea>
-                            </div>
-                            <a href="#" class="template-btn">appointment now</a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Patient Area Starts -->
 
     <!-- Specialist Area Starts -->
+    <?php
+        include "admin/connection.php";
+        $sql    ="SELECT * FROM doctor ";
+        $result =$db->query($sql);
+    ?>
     <section class="specialist-area section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-top text-center">
                         <h2>Our specialish</h2>
-                        <p>Green above he cattle god saw day multiply under fill in the cattle fowl a all, living, tree word link available in the service for subdue fruit.</p>
-                    </div>
+                        </div>
                 </div>
             </div>
             <div class="row">
+                <?php while($row = $result->fetch_assoc()):   ?>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-doctor mb-4 mb-lg-0">
                         <div class="doctor-img">
-                            <img src="assets/images/doctor1.jpg" alt="" class="img-fluid">
+                            <img src="<?php echo"admin/images/doctor/" .$row['image']  ;  ?>" alt="image">
                         </div>
                         <div class="content-area">
                             <div class="doctor-name text-center">
-                                <h3>ethel davis</h3>
-                                <h6>sr. faculty data science</h6>
+                                <h3><?php echo $row['name']  ;  ?></h3>
+                                <h6><?php echo $row['degree']  ;  ?></h6>
                             </div>
                             <div class="doctor-text text-center">
-                                <p>If you are looking at blank cassettes on the web, you may be very confused at the.</p>
+                                <p><?php echo $row['description']  ;  ?></p>
                                 <ul class="doctor-icon">
                                     <li><a href="#"><i class="fa fa-facebook"></i><a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i><a></li>
@@ -210,72 +165,8 @@ $result =$db->query($sql);
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-doctor mb-4 mb-lg-0">
-                        <div class="doctor-img">
-                            <img src="assets/images/doctor2.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="content-area">
-                            <div class="doctor-name text-center">
-                                <h3>dand mories</h3>
-                                <h6>sr. faculty plastic surgery</h6>
-                            </div>
-                            <div class="doctor-text text-center">
-                                <p>If you are looking at blank cassettes on the web, you may be very confused at the.</p>
-                                <ul class="doctor-icon">
-                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-doctor mb-4 mb-sm-0">
-                        <div class="doctor-img">
-                            <img src="assets/images/doctor3.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="content-area">
-                            <div class="doctor-name text-center">
-                                <h3>align board</h3>
-                                <h6>sr. faculty data science</h6>
-                            </div>
-                            <div class="doctor-text text-center">
-                                <p>If you are looking at blank cassettes on the web, you may be very confused at the.</p>
-                                <ul class="doctor-icon">
-                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-doctor">
-                        <div class="doctor-img">
-                            <img src="assets/images/doctor4.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="content-area">
-                            <div class="doctor-name text-center">
-                                <h3>jeson limit</h3>
-                                <h6>sr. faculty plastic surgery</h6>
-                            </div>
-                            <div class="doctor-text text-center">
-                                <p>If you are looking at blank cassettes on the web, you may be very confused at the.</p>
-                                <ul class="doctor-icon">
-                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endwhile; ?>
+                
             </div>
         </div>
     </section>
