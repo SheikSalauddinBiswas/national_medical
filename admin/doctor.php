@@ -34,7 +34,7 @@
             <td><?php echo $row['description']  ;  ?></td>
             <td>
              <a href="doctor_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
-             <a href="doctor_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
+             <a href="doctor_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
             </td>
         </tr>
         <?php endwhile; ?>

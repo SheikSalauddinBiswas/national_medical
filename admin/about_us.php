@@ -32,7 +32,7 @@
             <td><?php echo $row['description']  ;  ?></td>
             <td>
              <a href="home_welcome_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
-             <a href="home_welcome_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
+             <a href="about_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
             </td>
         </tr>
         <?php endwhile; ?>
