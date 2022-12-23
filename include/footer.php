@@ -1,20 +1,27 @@
     <!-- Footer Area Starts -->
+    <?php
+        include "connection.php";
+      $sql    ="SELECT * FROM adress ORDER BY id DESC";
+      $result =$db->query($sql);
+    ?>
     <footer class="footer-area section-padding">
         <div class="footer-widget">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-2 col-lg-3">
+                    <div class="col-xl-5 col-lg-6 offset-xl-2">
                         <div class="single-widget-home mb-5 mb-lg-0">
-                            <h3 class="mb-4">top products</h3>
+                            <h3 class="mb-4">National Medical</h3>
+                            <?php while($row = $result->fetch_assoc()):   ?>
                             <ul>
-                                <li class="mb-2"><a href="#">managed website</a></li>
-                                <li class="mb-2"><a href="#">managed reputation</a></li>
-                                <li class="mb-2"><a href="#">power tools</a></li>
-                                <li><a href="#">marketing service</a></li>
+                                <li class="mb-2"><a href="#"><?php echo $row['adress']  ;  ?></a></li>
+                                <li class="mb-2"><a href="#"><?php echo $row['mobile']  ;  ?></a></li>
+                                <li class="mb-2"><a href="#"><?php echo $row['email']  ;  ?></a></li>
+                                <li><a href="#">Send us your query anytime!</a></li>
                             </ul>
+                            <?php endwhile; ?>
                         </div>
                     </div>
-                    <div class="col-xl-5 offset-xl-1 col-lg-6">
+                    <!-- <div class="col-xl-5 offset-xl-1 col-lg-6">
                         <div class="single-widget-home mb-5 mb-lg-0">
                             <h3 class="mb-4">newsletter</h3>
                             <p class="mb-4">You can trust us. we only send promo offers, not a single.</p>  
@@ -23,8 +30,8 @@
                                 <button type="submit" class="template-btn">subscribe now</button>
                             </form>
                         </div>
-                    </div>
-                    <div class="col-xl-3 offset-xl-1 col-lg-3">
+                    </div> -->
+                    <!-- <div class="col-xl-3 offset-xl-1 col-lg-3">
                         <div class="single-widge-home">
                             <h3 class="mb-4">instagram feed</h3>
                             <div class="feed">
@@ -38,7 +45,7 @@
                                 <img src="assets/images/feed8.jpg" alt="feed">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -48,7 +55,7 @@
                     <div class="col-lg-8 col-md-6">
                         <span>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </span>
                     </div>

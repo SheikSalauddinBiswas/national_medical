@@ -56,6 +56,9 @@ include "connection.php";
 			  <li>
               <a href="appointment.php"><span class="fa fa-list-alt mr-3"></span> Appointment</a>
 	          </li>
+			  <li>
+              <a href="footer.php"><span class="fa fa-bars mr-3"></span> Footer</a>
+	          </li>
 			  <li class="d-flex justify-content-center">
 				<a href="logout.php"><button class="btn btn-outline-danger mt-1 ">Log Out</button></a>
 			  </li>
