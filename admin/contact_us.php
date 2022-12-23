@@ -65,7 +65,7 @@
             <td><?php echo $row['mobile']  ;  ?></td>
             <td><?php echo $row['email']  ;  ?></td>
             <td>
-             <a href="gmap_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+             <a href="adress_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
             </td>
         </tr>
         <?php endwhile; ?>

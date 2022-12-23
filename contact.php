@@ -35,17 +35,23 @@
 
 
     <!-- Contact Form Starts -->
+    <?php
+        include "admin/connection.php";
+        $sql    ="SELECT * FROM adress ";
+        $result =$db->query($sql);
+    ?>
     <section class="contact-form section-padding3">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 mb-5 mb-lg-0 ">
-                    <div class="d-flex justify-content-center">
+                    <?php while($row = $result->fetch_assoc()):   ?>
+                    <div class="d-flex ">
                         <div class="into-icon">
                             <i class="fa fa-home"></i>
                         </div>
                         <div class="info-text">
-                            <h3>California, United States</h3>
-                            <p>Santa monica bullevard</p>
+                            <h3><?php echo $row['adress']  ;  ?></h3>
+                            
                         </div>
                     </div>
                     <div class="d-flex">
@@ -53,19 +59,21 @@
                             <i class="fa fa-phone"></i>
                         </div>
                         <div class="info-text">
-                            <h3>00 (440) 9865 562</h3>
-                            <p>Mon to Fri 9am to 6 pm</p>
+                            <h3><?php echo $row['mobile']  ;  ?></h3>
+                            
                         </div>
-                    </div>
+                    </div><br>
                     <div class="d-flex">
                         <div class="into-icon">
                             <i class="fa fa-envelope-o"></i>
+                            <br>
                         </div>
                         <div class="info-text">
-                            <h3>support@colorlib.com</h3>
+                            <h3><?php echo $row['email']  ;  ?></h3>
                             <p>Send us your query anytime!</p>
                         </div>
                     </div>
+                    <?php endwhile; ?>
                 </div>
                 
             </div>
