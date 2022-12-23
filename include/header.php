@@ -64,7 +64,7 @@
                         <li><a href="departments.php">departments</a></li>
                         <li><a href="doctors.php">doctors</a></li>
                         <li><a href="about.php">about us</a></li>
-                        <li><a href="blog-home.php">blog home</a></li>
+                        <li><a href="blog.php">blog</a></li>
                         <li><a href="contact.php">Contact</a></li>			          				          
                     </ul>
                 </nav><!-- #nav-menu-container -->		    		
