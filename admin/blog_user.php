@@ -1,7 +1,7 @@
 <?php 
     include "include/header.php"; 
     include "connection.php"; 
-    $sql    ="SELECT * FROM blog_user ORDER BY id DESC";
+    $sql    ="SELECT * FROM blog_user ORDER BY blog_id DESC";
     $result =$db->query($sql);
 
 
@@ -26,14 +26,13 @@
             <?php while($row = $result->fetch_assoc()):   ?>
             <tbody>
                 <tr>
-                    <td><?php echo $row['id']  ;  ?></td>
-                    <td><img src="<?php echo"images/users/" .$row['image']  ;  ?>" width="50px" alt="image"></td>
+                    <td><?php echo $row['blog_id']  ;  ?></td>
+                    <td><img src="<?php echo"images/blog-user/" .$row['image']  ;  ?>" width="50px" alt="image"></td>
                     <td><?php echo $row['name']  ;  ?></td>
                     <td><?php echo $row['email']  ;  ?></td>
                     <td><?php echo $row['mobile']  ;  ?></td>
                     <td>
-                        <a href="blog_user_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
-                        <a href="delete_blog_user.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                        <a href="delete_blog_user.php?blog_id=<?php echo $row['blog_id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
                     </td>
                     
                 </tr>
