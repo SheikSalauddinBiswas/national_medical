@@ -53,6 +53,12 @@
                 </div>
             </div>
         </div>
+        <!-- navbar area -->
+        <?php
+        include "connection.php";
+        $sql    ="SELECT * FROM navbar ";
+        $result =$db->query($sql);
+        ?>
         <div id="header" id="home">
             <div class="container">
                 <div class="row align-items-center justify-content-between d-flex">
@@ -61,12 +67,15 @@
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                        <li class="menu-active"><a href="index.php">Home</a></li>
-                        <li><a href="departments.php">departments</a></li>
+                        
+                        <li><a href="index.php">Home</a></li>
+                        <?php while($row = $result->fetch_assoc()):   ?>
+                        <!-- <li><a href="departments.php">departments</a></li>
                         <li><a href="doctors.php">doctors</a></li>
-                        <li><a href="about.php">about us</a></li>
-                        <li><a href="blog.php">blog</a></li>
-                        <li><a href="contact.php">Contact</a></li>			          				          
+                        <li><a href="about.php">about us</a></li> -->
+                        <li><a href="blog.php"><?php echo $row['name']  ;  ?></a></li>
+                        <!-- <li><a href="contact.php">Contact</a></li>		 -->
+                        <?php endwhile; ?>	          				          
                     </ul>
                 </nav><!-- #nav-menu-container -->		    		
                 </div>

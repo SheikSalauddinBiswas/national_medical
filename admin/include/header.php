@@ -60,6 +60,9 @@ include "connection.php";
               <a href="appointment.php"><span class="fa fa-list-alt mr-3"></span> Appointment</a>
 	          </li>
 			  <li>
+              <a href="navbar.php"><span class="fa fa-bars mr-3"></span> Navbar</a>
+	          </li>
+			  <li>
               <a href="footer.php"><span class="fa fa-bars mr-3"></span> Footer</a>
 	          </li>
 			  <li class="d-flex justify-content-center">
