@@ -10,7 +10,7 @@ $userdata   = $result->fetch_assoc();
 
 if($userdata){
     session_start();
-    $_SESSION['id'] = $userdata['id'];
+    $_SESSION['blog_id'] = $userdata['blog_id'];
 }
 
 if(mysqli_num_rows($result)){

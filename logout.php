@@ -1,10 +1,10 @@
 <?php
 session_start();
-if($_SESSION['id']){
-    $_SESSION['id'] = null;
+if($_SESSION['blog_id']){
+    $_SESSION['blog_id'] = null;
 }
 
-if($SESSION['id'] == null){
+if($SESSION['blog_id'] == null){
     session_destroy();
     header('Location:index.php');
 }
