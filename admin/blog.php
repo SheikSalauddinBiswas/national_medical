@@ -1,4 +1,8 @@
-<?php include "include/header.php"; ?>
+<?php include "include/header.php"; 
+include "connection.php"; 
+$sql    ="SELECT * FROM blog ORDER BY id DESC";
+$result =$db->query($sql);
+?>
 <div class="" id="content">
     <div class="">
         <div class="">
@@ -25,12 +29,15 @@
         <tbody>
         <tr>
             <td><?php echo $row['id']  ;  ?></td>
-            <td><img src="<?php echo"images/welcome/" .$row['image']  ;  ?>" width="50px" alt="image"></td>
+            <td><img src="<?php echo"images/blog/" .$row['image']  ;  ?>" width="50px" alt="image"></td>
+            <td><?php echo $row['tag']  ;  ?></td>
+            <td><?php echo $row['name']  ;  ?></td>
+            <td><?php echo $row['date']  ;  ?></td>
             <td><?php echo $row['title']  ;  ?></td>
             <td><?php echo $row['description']  ;  ?></td>
             <td>
              
-             <a href="home_welcome_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+             <a href="blog_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
             </td>
         </tr>
         <?php endwhile; ?>

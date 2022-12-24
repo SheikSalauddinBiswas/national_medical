@@ -14,9 +14,11 @@ if($_SESSION['id']):
                 </div>
             </div>
         </div>
-    </section> <br><br>
+    </section> <br>
     <!-- Banner Area End -->
-    
+    <a href="add_blog.php"><button type="button" class="btn btn-secondary btn-lg btn-block">Add a new Blog</button></a>
+
+    <br>
 
     
     
