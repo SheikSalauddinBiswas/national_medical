@@ -51,7 +51,7 @@ if($_SESSION['blog_id']):
                            </div>
                             <div class="col-md-9">
                                 <div class="blog_post">
-                                    <img src="<?php echo"admin/images/blog/" .$row['image']  ;  ?>" alt="">
+                                    <img src="<?php echo"admin/images/blog/" .$row['image']  ;  ?>" alt="" width="600">
                                     <div class="blog_details">
                                         <a href="blog-details.php"><h4><?php echo $row['title']  ;  ?></h4></a>
                                         <p><?php echo $row['description']  ;  ?></p>
