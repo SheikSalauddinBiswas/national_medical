@@ -51,6 +51,9 @@ include "connection.php";
               <a href="user.php"><span class="fa fa-users mr-3"></span> Users</a>
 	          </li>
 			  <li>
+              <a href="blog_user.php"><span class="fa fa-users mr-3"></span> Blog Users</a>
+	          </li>
+			  <li>
               <a href="registration.php"><span class="fa fa-address-card-o mr-3"></span> Registration</a>
 	          </li>
 			  <li>
