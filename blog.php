@@ -1,4 +1,9 @@
-<?php include "include/header.php"; ?>
+<?php include "include/header.php"; 
+
+session_start();
+if($_SESSION['id']):
+
+?>
     <!-- Banner Area Starts -->
     <section class="banner-area other-page">
         <div class="container">
@@ -11,6 +16,7 @@
         </div>
     </section> <br><br>
     <!-- Banner Area End -->
+    
 
     
     
@@ -193,4 +199,11 @@
 
 
 
-<?php include "include/footer.php"; ?>
+<?php include "include/footer.php"; 
+
+else:
+    header("Location:login.php");
+  
+  endif;
+  
+?>

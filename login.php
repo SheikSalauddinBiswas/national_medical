@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="admin/css/styles.css">
 </head>
 <body>
 
@@ -20,8 +20,8 @@
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
-                        <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
-                        
+                        <figure><img src="admin/images/signin-image.jpg" alt="sing up image"></figure>
+                        <a href="registration.php"><p class="text-secondary">Or Registrater a new Account </p class="text-secondary"></a>
                     </div>
 
                     <div class="signin-form">
@@ -43,14 +43,7 @@
                                 <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
                             </div>
                         </form>
-                        <div class="social-login">
-                            <span class="social-label">Or login with</span>
-                            <ul class="socials">
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
-                            </ul>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

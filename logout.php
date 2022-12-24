@@ -6,7 +6,7 @@ if($_SESSION['id']){
 
 if($SESSION['id'] == null){
     session_destroy();
-    header('Location:login.php');
+    header('Location:index.php');
 }
 
 

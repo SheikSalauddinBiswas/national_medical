@@ -46,6 +46,7 @@
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                                 <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                <li><a href="logout.php"><button type="button" class="btn btn-outline-secondary btn-sm"> Log Out</button></a></li>
                             </ul>
                         </div>
                     </div>

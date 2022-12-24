@@ -1,5 +1,5 @@
 <?php
-include "connection.php";
+include "include/connection.php";
 
 $email      =$_POST['email'];
 $password   =$_POST['password'];
@@ -14,7 +14,7 @@ if($data){
 }
 
 if(mysqli_num_rows($result)){
-    header('Location:index.php');
+    header('Location:blog.php');
 }
 else{
     echo "You are not a Registared member";
