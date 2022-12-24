@@ -4,13 +4,13 @@ include "include/connection.php";
 $email      =$_POST['email'];
 $password   =$_POST['password'];
 
-$sql = "SELECT * FROM user WHERE email='$email' AND password='$password'";
+$sql = "SELECT * FROM blog_user WHERE email='$email' AND password='$password'";
 $result =$db->query($sql);
-$data   = $result->fetch_assoc();
+$userdata   = $result->fetch_assoc();
 
-if($data){
+if($userdata){
     session_start();
-    $_SESSION['id'] = $data['id'];
+    $_SESSION['id'] = $userdata['id'];
 }
 
 if(mysqli_num_rows($result)){
