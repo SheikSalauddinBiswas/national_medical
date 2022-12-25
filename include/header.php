@@ -71,9 +71,9 @@
                         <li><a href="index.php">Home</a></li>
                         <?php while($row = $result->fetch_assoc()):   ?>
                         <!-- <li><a href="departments.php">departments</a></li>
-                        <li><a href="doctors.php">doctors</a></li>
-                        <li><a href="about.php">about us</a></li> -->
-                        <li><a href="blog.php"><?php echo $row['name']  ;  ?></a></li>
+                        <li><a href="doctors.php">doctors</a></li>-->
+                        <!-- <li><a href="blog.php">about us</a></li>  -->
+                        <li><a href="<?php echo $row['link']  ;  ?>.php"><?php echo $row['name']  ;  ?></a></li>
                         <!-- <li><a href="contact.php">Contact</a></li>		 -->
                         <?php endwhile; ?>	          				          
                     </ul>
