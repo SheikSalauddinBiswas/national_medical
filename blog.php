@@ -1,7 +1,12 @@
-<?php include "include/header.php"; 
-    include "include/connection.php";
-    session_start();
-    if($_SESSION['blog_id']):
+<?php 
+
+session_start();
+
+if(isset($_SESSION['blog_id'])):
+
+include "include/header.php"; 
+include "include/connection.php";
+
 
 ?>
     <!-- Banner Area Starts -->

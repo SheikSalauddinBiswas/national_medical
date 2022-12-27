@@ -1,10 +1,11 @@
 <?php 
+session_start();
+if($_SESSION['id']):
 include "include/header.php"; 
 include "connection.php"; 
 $sql    ="SELECT * FROM home_banner_text ORDER BY id DESC";
 $result =$db->query($sql);
-session_start();
-if($_SESSION['id']):
+
 ?>
   <div class="" id="content">
     <div class="">
