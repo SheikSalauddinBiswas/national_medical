@@ -32,7 +32,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-doctor mb-4 mb-lg-0">
                         <div class="doctor-img">
-                            <img src="<?php echo"admin/images/doctor/" .$row['image']  ;  ?>" alt="image">
+                            <img src="<?php echo"admin/images/doctor/" .$row['image']  ;  ?>" alt="image" width="260">
                         </div>
                         <div class="content-area">
                             <div class="doctor-name text-center">
