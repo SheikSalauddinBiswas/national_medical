@@ -112,28 +112,6 @@ $result =$db->query($sql);
       </table>
     </div>
     <!-- Home Welcome area end -->
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
   
 <?php include "include/footer.php"; 

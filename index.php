@@ -3,10 +3,6 @@ include "include/header.php";
 include "admin/connection.php";
 $sql    ="SELECT * FROM home_banner_text ";
 $result =$db->query($sql);
-
-
-
-
 ?>
     <!-- Banner Area Starts -->
     <section class="banner-area">
@@ -192,11 +188,5 @@ $result =$db->query($sql);
         </div>
     </section>
     <!-- Hotline Area End -->
-
-    
-
-
-
-
 
 <?php include "include/footer.php"; ?>

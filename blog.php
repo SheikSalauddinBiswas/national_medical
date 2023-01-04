@@ -16,6 +16,7 @@ include "include/connection.php";
                 <div class="col-lg-12">
                     <h1>Blog Home</h1>
                     <a href="index.php">Home</a> <span>|</span> <a href="blog-home.php">Blog Home</a>
+                    <li><a href="logout.php"><button type="button" class="btn btn-outline-secondary btn-sm"> Log Out</button></a></li>
                 </div>
             </div>
         </div>
