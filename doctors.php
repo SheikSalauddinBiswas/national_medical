@@ -58,7 +58,7 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
                                     <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
                                 </ul>
-                                <a href=""><button type="button" class="btn btn-outline-success btn-sm">View More..</button></a>
+                                <a href="doctor_details.php?id=<?php echo $row['id']; ?>"><button type="button" class="btn btn-outline-success btn-sm">View More..</button></a>
                             </div>
                         </div>
                     </div>
