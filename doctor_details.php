@@ -32,7 +32,6 @@
                         <h1><?php echo $hwrow['name']  ;  ?></h1>
                         <u><h3><?php echo $hwrow['degree']  ;  ?></h3></u>
                         <p class="pt-3"><?php echo $hwrow['description']  ;  ?></p>
-                        <a href="#" class="template-btn mt-3">learn more</a>
                     </div>
                 </div>
                 <?php endwhile; ?>
