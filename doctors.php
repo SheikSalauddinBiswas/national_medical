@@ -13,20 +13,31 @@
     <!-- Banner Area End -->
 
     <!-- Specialist Area Starts -->
-    <?php
-        include "admin/connection.php";
-        $sql    ="SELECT * FROM doctor ";
-        $result =$db->query($sql);
-    ?>
+    
     <section class="specialist-area section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-top text-center">
-                        <h2>Our specialish</h2>
+                        <u><h2>Our specialish</h2></u><hr>
                         </div>
                 </div>
             </div>
+            <!-- Catogory Star  -->
+            <!-- Medicine  -->
+            <?php
+                include "admin/connection.php";
+                $sql    ="SELECT * FROM doctor WHERE degree='Medicine' ";
+                $result =$db->query($sql);
+            ?>
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <div class="section-top ">
+                        <u><h2 class="text-secondary">Medicine</h2></u>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <?php while($row = $result->fetch_assoc()):   ?>
                 <div class="col-lg-3 col-sm-6">
@@ -47,6 +58,7 @@
                                     <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
                                     <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
                                 </ul>
+                                <a href=""><button type="button" class="btn btn-outline-success btn-sm">View More..</button></a>
                             </div>
                         </div>
                     </div>
@@ -54,6 +66,101 @@
                 <?php endwhile; ?>
                 
             </div>
+            <br><br>
+            <!-- medicine  -->
+            <!-- Gynecologist -->
+            <?php
+                include "admin/connection.php";
+                $sql    ="SELECT * FROM doctor WHERE degree='Gynecologist' ";
+                $result =$db->query($sql);
+            ?>
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <div class="section-top ">
+                        <u><h2 class="text-secondary">Gynecologist</h2></u>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <?php while($row = $result->fetch_assoc()):   ?>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-doctor mb-4 mb-lg-0">
+                        <div class="doctor-img">
+                            <img src="<?php echo"admin/images/doctor/" .$row['image']  ;  ?>" alt="image" width="260">
+                        </div>
+                        <div class="content-area">
+                            <div class="doctor-name text-center">
+                                <h3><?php echo $row['name']  ;  ?></h3>
+                                <h6><?php echo $row['degree']  ;  ?></h6>
+                            </div>
+                            <div class="doctor-text text-center">
+                                <p><?php echo $row['description']  ;  ?></p>
+                                <ul class="doctor-icon">
+                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
+                                </ul>
+                                <a href=""><button type="button" class="btn btn-outline-success btn-sm">View More..</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php endwhile; ?>
+                
+            </div><br><br>
+
+            <!-- Gynecologist -->
+            <!-- Cardiologist -->
+            <?php
+                include "admin/connection.php";
+                $sql    ="SELECT * FROM doctor WHERE degree='Cardiologist' ";
+                $result =$db->query($sql);
+            ?>
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <div class="section-top ">
+                        <u><h2 class="text-secondary">Cardiologist</h2></u>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <?php while($row = $result->fetch_assoc()):   ?>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-doctor mb-4 mb-lg-0">
+                        <div class="doctor-img">
+                            <img src="<?php echo"admin/images/doctor/" .$row['image']  ;  ?>" alt="image" width="260">
+                        </div>
+                        <div class="content-area">
+                            <div class="doctor-name text-center">
+                                <h3><?php echo $row['name']  ;  ?></h3>
+                                <h6><?php echo $row['degree']  ;  ?></h6>
+                            </div>
+                            <div class="doctor-text text-center">
+                                <p><?php echo $row['description']  ;  ?></p>
+                                <ul class="doctor-icon">
+                                    <li><a href="#"><i class="fa fa-facebook"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i><a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i><a></li>
+                                </ul>
+                                <a href=""><button type="button" class="btn btn-outline-success btn-sm">View More..</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php endwhile; ?>
+                
+            </div>
+
+
+
+            <!-- Cardiologist -->
+
+            <!-- Catagoory End  -->
+            
         </div>
     </section>
     <!-- Specialist Area Starts -->
